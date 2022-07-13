@@ -11,7 +11,9 @@ public class Principal {
 		boolean ex4 = false;
 		boolean ex5 = false;
 		boolean ex6 = false;
-		boolean ex7 = true;
+		boolean ex7 = false;
+		boolean ex8 = false;
+		boolean ex9 = true;
 		
 		
 		Scanner scan = new Scanner(System.in);
@@ -158,6 +160,27 @@ public class Principal {
 			for( int i = tam-1 ; i >= 0 ; i-- ) {
 				System.out.print( vetor[i] + " " );
 			}
+		}
+		
+		//Exemplo 8 - Lê Caracteres
+		if(ex8) {
+			System.out.print( "Digite uma Palavra: " );
+			String palavra = scan.next();
+			int tam = palavra.length();
+			char vetor[] = new char [tam];
+			int vogal = 0, consoante = 0;
+			for( int i = 0 ; i < tam ; i++ ) {
+				vetor[i] = palavra.charAt(i);
+
+				if( vetor[i] == 'a' || vetor[i] == 'e' || vetor[i] == 'i' || vetor[i] == 'o' || vetor[i] == 'u' ||
+					vetor[i] == 'A' || vetor[i] == 'E' || vetor[i] == 'I' || vetor[i] == 'O' || vetor[i] == 'U') {
+					vogal++;
+				}else {
+					consoante++;
+				}
+			}
+			System.out.print( palavra + " tem " + vogal + " vogais e " + consoante + " consoantes!");
+
 		}
 		
 		scan.close();
