@@ -14,7 +14,8 @@ public class Principal {
 		boolean ex6 = false;
 		boolean ex7 = false;
 		boolean ex8 = false;
-		boolean ex9 = true;
+		boolean ex9 = false;
+		boolean ex10 = true;
 		
 		
 		Scanner scan = new Scanner(System.in);
@@ -207,6 +208,25 @@ public class Principal {
 			for(int numero : vetor) {
 				System.out.print( (numero+1) + " ");
 			}
+		}
+		
+		//Exemplo 10 - Matriz 4x4
+		if(ex10) {
+			System.out.println( "Matriz 4x4: " );
+			int matriz[][] = new int [4][4];
+			Random random = new Random();
+			for( int i = 0 ; i < 4 ; i++ ) {
+				for( int j = 0 ; j < 4 ; j++ ) {
+					matriz[i][j] = random.nextInt(9);
+				}
+			}
+			for(int[] linha : matriz) {
+				for(int coluna : linha) {
+					System.out.print( coluna + " " );
+				}
+				System.out.println( " " );
+			}
+
 		}
 		
 		scan.close();
