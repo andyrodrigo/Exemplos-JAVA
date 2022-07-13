@@ -10,7 +10,9 @@ public class Principal {
 		boolean ex3 = false;
 		boolean ex4 = false;
 		boolean ex5 = false;
-		boolean ex6 = true;
+		boolean ex6 = false;
+		boolean ex7 = true;
+		
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -141,6 +143,21 @@ public class Principal {
 				fatorial = fatorial * i;
 			}
 			System.out.println( numero + "! = " + fatorial);
+		}
+		
+		//Exemplo 7 - Ordem Inversa
+		if(ex7) {
+			int vetor[] = {0, 1, 2, 3, 4, 5};
+			int tam = vetor.length;
+			System.out.print( "Vetor Normal: " );
+			for( int i = 0 ; i < tam ; i++ ) {
+				System.out.print( vetor[i] + " " );
+			}
+			System.out.println( " " );
+			System.out.print( "Vetor Invertido: " );
+			for( int i = tam-1 ; i >= 0 ; i-- ) {
+				System.out.print( vetor[i] + " " );
+			}
 		}
 		
 		scan.close();
