@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Principal {
@@ -181,6 +182,31 @@ public class Principal {
 			}
 			System.out.print( palavra + " tem " + vogal + " vogais e " + consoante + " consoantes!");
 
+		}
+		
+		//Exemplo 9 - Números Aleatórios
+		if(ex9) {
+			System.out.println( "Vetor de Números Aleatórios: " );
+			int vetor[] = new int [20];
+			Random random = new Random();
+			for( int i = 0 ; i < 20 ; i++ ) {
+				vetor[i] = random.nextInt(100);
+			}
+			System.out.print( "Números: " );
+			//for each numero em vetor
+			for(int numero : vetor) {
+				System.out.print(numero + " ");
+			}
+			System.out.println( " " );
+			System.out.print( "Antecessores: " );
+			for(int numero : vetor) {
+				System.out.print( (numero-1) + " ");
+			}
+			System.out.println( " " );
+			System.out.print( "Sucessores: " );
+			for(int numero : vetor) {
+				System.out.print( (numero+1) + " ");
+			}
 		}
 		
 		scan.close();
