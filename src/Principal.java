@@ -8,7 +8,9 @@ public class Principal {
 		boolean ex1 = false;
 		boolean ex2 = false;
 		boolean ex3 = false;
-		boolean ex4 = true;
+		boolean ex4 = false;
+		boolean ex5 = false;
+		//boolean ex6 = true;
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -105,6 +107,22 @@ public class Principal {
 		
 			System.out.println("Pares: " + par );
 			System.out.println("Ímpares: " + impar );
+		}
+		
+		//Exemplo 5 - Tabuada
+		if(ex5) {
+			System.out.println("Tabuada:");
+			int numero = 0;
+			System.out.println("Digite um número de 1 a 10:");
+			numero  = scan.nextInt();
+			while(numero < 1 || numero > 10) {
+				System.out.println("iNVÁLIDO! Digite um número de 1 a 10:");
+				numero  = scan.nextInt();
+			}
+			System.out.println("Tabuada de " + numero);
+			for(int i = 0; i <= 10 ; i++ ) {
+				System.out.println( numero + " X " + i + " = " + (numero*i) );
+			}
 		}
 		
 		scan.close();
