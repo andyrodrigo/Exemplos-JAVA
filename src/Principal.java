@@ -10,7 +10,7 @@ public class Principal {
 		boolean ex3 = false;
 		boolean ex4 = false;
 		boolean ex5 = false;
-		//boolean ex6 = true;
+		boolean ex6 = true;
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -123,6 +123,24 @@ public class Principal {
 			for(int i = 0; i <= 10 ; i++ ) {
 				System.out.println( numero + " X " + i + " = " + (numero*i) );
 			}
+		}
+		
+		//Exemplo 6 - Fatorial
+		if(ex6) {
+			System.out.println("Fatorial:");
+			int numero = 0;
+			System.out.println("Digite um número maior que 0:");
+			numero  = scan.nextInt();
+			while(numero < 1) {
+				System.out.println("iNVÁLIDO! Digite um número maior que 0:");
+				numero  = scan.nextInt();
+			}
+			System.out.println("Fatorial de " + numero);
+			int fatorial = 1;
+			for(int i = numero; i >= 1 ; i-- ) {
+				fatorial = fatorial * i;
+			}
+			System.out.println( numero + "! = " + fatorial);
 		}
 		
 		scan.close();
